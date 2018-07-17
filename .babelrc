@@ -6,7 +6,8 @@
           "module": false
         }
       ],
-      "react"
+      "react",
+      "stage-1"
     ],
     "plugins": [
       "react-hot-loader/babel"]

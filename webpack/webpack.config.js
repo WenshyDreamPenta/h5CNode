@@ -5,6 +5,7 @@ module.exports = {
     mode: 'development',
     devtool: 'cheap-module-eval-source-map',
     entry: [
+        //React热更新
         'babel-polyfill',
         'react-hot-loader/patch',
         'webpack-dev-server/client?http://localhost:9090',
@@ -15,6 +16,7 @@ module.exports = {
         path: path.resolve(__dirname, "../dist"), // 输出的路径
         filename: 'app/[name]_[hash:8].js', // 打包后文件
     },
+
     module: {
         rules: [
             {
@@ -51,7 +53,7 @@ module.exports = {
     plugins: [
         //默认html模板
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../src/index.template.html'),
+            template: path.resolve(__dirname, '../public/index.template.html'),
             inject: true
         }),
         //热更新
