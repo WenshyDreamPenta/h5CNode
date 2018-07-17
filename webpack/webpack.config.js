@@ -2,15 +2,18 @@ const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     devtool: 'cheap-module-eval-source-map',
-    entry: [
-        //React热更新
-        'babel-polyfill',
-        'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:9090',
-        'webpack/hot/only-dev-server',
-        path.resolve(__dirname, "../src/index.js")], //指定入口文件，程序从这里开始编译,__dirname当前所在目录, ../表示上一级目录, ./同级目录
+    //指定入口文件，程序从这里开始编译,__dirname当前所在目录, ../表示上一级目录, ./同级目录
+    entry: {
+        app: [
+            'babel-polyfill',
+            path.resolve(__dirname, "../src/index.js")],
+        vendor: ['react', 'react-dom', 'babel-polyfill']
+    },
+    resolve: { // 指定第三方库目录，减少webpack寻找时间
+        modules: [path.resolve(__dirname, '../node_modules')],
+    },
     //添加热更新入口
     output: {
         path: path.resolve(__dirname, "../dist"), // 输出的路径
@@ -51,6 +54,7 @@ module.exports = {
         ]
     },
     plugins: [
+
         //默认html模板
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../public/index.template.html'),
@@ -58,5 +62,6 @@ module.exports = {
         }),
         //热更新
         new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    performance: { hints: false }
 };
