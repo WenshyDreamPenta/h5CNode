@@ -11,10 +11,12 @@ module.exports = {
     module: {
         rules: [
             {
+                //js/jsx文件处理
                 test: /\.(js|jsx)$/,
                 loader: "babel-loader",
                 exclude: /node_modules/
             },
+            //css处理
             {
                 test: /\.css$/,
                 use: [{
@@ -23,6 +25,7 @@ module.exports = {
                     loader: 'css-loader'
                 }],
             },
+            //less文件处理
             {
                 test: /\.less$/,
                 use: [{
