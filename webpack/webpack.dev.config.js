@@ -14,7 +14,7 @@ module.exports = merge(webpackConfig, {
         "react-hot-loader/patch",
         "webpack-dev-server/client?http://localhost:9090",
         "webpack/hot/only-dev-server",
-        path.resolve(__dirname, "../src/index.js")
+        path.resolve(__dirname, "../src/entry/index.js")
     ], //指定入口文件，程序从这里开始编译,__dirname当前所在目录, ../表示上一级目录, ./同级目录
     plugins: [
         //默认html模板
