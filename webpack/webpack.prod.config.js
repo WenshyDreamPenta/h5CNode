@@ -15,6 +15,12 @@ module.exports = merge(webpackConfig, {
                 output: {
                     comments: false,
                     beautify: false
+                },
+                compress: {
+                    warnings: false,
+                    // 去掉debugger和console
+                    drop_debugger: true,
+                    drop_console: true
                 }
             }
         }),

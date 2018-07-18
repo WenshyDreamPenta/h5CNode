@@ -8,8 +8,7 @@ process.env.NODE_ENV = "development";
 module.exports = merge(webpackConfig, {
     mode: "production",
     devtool: "cheap-module-eval-source-map",
-    entry: [
-        //React热更新
+    entry: [//React热更新
         "babel-polyfill",
         "react-hot-loader/patch",
         "webpack-dev-server/client?http://localhost:9090",

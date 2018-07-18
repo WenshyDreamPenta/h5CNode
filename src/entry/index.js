@@ -15,7 +15,7 @@ const renderDom = Component => {
 renderDom(App);
 
 if (module.hot) {
-    module.hot.accept("./App", () => {
+    module.hot.accept("../App", () => {
         const App = require("../App").default;
         renderDom(App);
     });
