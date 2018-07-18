@@ -6,7 +6,7 @@ module.exports = {
     devtool: "cheap-module-eval-source-map",
     //指定入口文件，程序从这里开始编译,__dirname当前所在目录, ../表示上一级目录, ./同级目录
     entry: {
-        app: ["babel-polyfill", path.resolve(__dirname, "../src/entry/index.js")],
+        app: ["babel-polyfill", path.resolve(__dirname, "../entry/index.js")],
         vendor: ["react", "react-dom", "babel-polyfill"]
     },
     resolve: {
