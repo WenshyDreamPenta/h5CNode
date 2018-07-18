@@ -1,7 +1,7 @@
 "use strict";
 
 const WebpackDevServer = require("webpack-dev-server");
-const config = require("../webpack/webpack.dev.config");
+const config = require("../webpack/webpack.config");
 const webpack = require("webpack");
 const path = require("path");
 const compiler = webpack(config);
@@ -12,7 +12,8 @@ const server = new WebpackDevServer(compiler, {
     port: 9090, //如果省略，默认8080
     publicPath: "/",
     inline:true,
-    hot:true
+    hot:true,
+    open:true
 });
 server.listen(9090, "localhost", function (err) {
     if (err) throw err;

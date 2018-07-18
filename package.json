@@ -2,13 +2,14 @@
   "name": "h5cnode",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./entry/index.js",
   "author": "wangmingxing",
   "license": "MIT",
   "scripts": {
-    "dev": "node bin/dev-server",
+    "dev": "node webpack/dev-server",
     "build": "npm run clean && webpack --config webpack/webpack.prod.config.js --progress --hot --watch",
     "devbuild": "npm run clean && webpack --config webpack/webpack.dev.config.js",
+    "start": "webpack-dev-server --open",
     "clean": "rimraf dist"
   },
   "dependencies": {

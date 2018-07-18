@@ -9,4 +9,4 @@ const renderDom = Component => {
         document.getElementById('app')
     );
 };
-renderDom(App);
+renderDom(App)

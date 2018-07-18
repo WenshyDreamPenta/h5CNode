@@ -13,6 +13,7 @@ module.exports = {
         // 指定第三方库目录，减少webpack寻找时间
         modules: [path.resolve(__dirname, "../node_modules")]
     },
+    
     //添加热更新入口
     output: {
         path: path.resolve(__dirname, "../dist"), // 输出的路径
