@@ -12,7 +12,8 @@ const server = new WebpackDevServer(compiler, {
     publicPath: "/",
     inline:true,
     hot:true,
-    open:true
+    open:true,
+    compress:true
 });
 server.listen(9090, "localhost", function (err) {
     if (err) throw err;

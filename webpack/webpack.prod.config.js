@@ -30,6 +30,7 @@ module.exports = merge(webpackConfig, {
             )
         }),
         new HtmlWebpackPlugin({
+            title: 'CNode', 
             template: path.resolve(__dirname, "../public/index.template.html"),
             inject: true,
             minify: {

@@ -75,6 +75,7 @@ module.exports = {
     plugins: [
         //默认html模板
         new HtmlWebpackPlugin({
+            title: 'CNode', 
             template: path.resolve(__dirname, "../public/index.template.html"),
             inject: true
         }),

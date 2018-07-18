@@ -18,6 +18,7 @@ module.exports = merge(webpackConfig, {
     plugins: [
         //默认html模板
         new HtmlWebpackPlugin({
+            title: 'CNode dev', 
             template: path.resolve(__dirname, "../public/index.template.html"),
             inject: true
         }),
