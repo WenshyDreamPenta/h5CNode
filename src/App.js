@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LaunchPage from './main/LaunchPage.js';
+import HomePage from './main/HomePage.js';
 
 export default class App extends Component {
     constructor(props) {
@@ -8,7 +8,7 @@ export default class App extends Component {
 
     render() {
         return (
-            <LaunchPage/>
+            <HomePage/>
         );
     }
 }

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class LaunchPage extends Component {
+class HomePage extends Component {
     constructor(props){
         super(props);
     }
     render(){
-        return (<div></div>)
+        return (<div>hello,React</div>)
     }
 }
-export default LaunchPage
+export default HomePage
