@@ -62,7 +62,7 @@ module.exports = {
                 test: /\.scss$/,
                 // exclude: [nodeModulesPath]用来排除不处理的目录
                 exclude: /node_modules/,
-                loader: 'style!css?modules!postcss!sass'
+                loader: 'style-loader!css-loader!sass-loader'
             },
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
